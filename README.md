@@ -20,6 +20,12 @@ The buildpack will do the following if a JRE is requested:
 * Contributes a JRE to a layer with all commands on `$PATH`
 * Contributes `$JAVA_HOME` configured to the layer
 * Contributes `-XX:ActiveProcessorCount` to the layer
+* Contributes `-XX:+ExitOnOutOfMemoryError` to the layer
+* Contributes `-XX:+UnlockDiagnosticVMOptions`,`-XX:NativeMemoryTracking=summary` & `-XX:+PrintNMTStatistics` to the layer (Java NMT)
+* If `BPL_JMX_ENABLED = true`
+  * Contributes `-Djava.rmi.server.hostname=127.0.0.1`, `-Dcom.sun.management.jmxremote.authenticate=false`, `-Dcom.sun.management.jmxremote.ssl=false` & `-Dcom.sun.management.jmxremote.rmi.port=5000`
+* If `BPL_DEBUG_ENABLED = true`
+  * Contributes `-agentlib:jdwp=transport=dt_socket,server=y,address=*:8000,suspend=n`. If Java version is 8, address parameter is `address=:8000`
 * Contributes `$MALLOC_ARENA_MAX` to the layer
 * Disables JVM DNS caching if link-local DNS is available
 * If `metadata.build = true`
@@ -27,14 +33,24 @@ The buildpack will do the following if a JRE is requested:
 * If `metadata.launch = true`
   * Marks layer as `launch`
 * Contributes Memory Calculator to a layer marked `launch`
+* * Contributes Heap Dump helper to a layer marked `launch`
 
 ## Configuration
 | Environment Variable | Description
 | -------------------- | -----------
 | `$BP_JVM_VERSION` | Configure the JVM version (e.g. `8`, `11`, `15`).  The buildpack will download JDK and JRE assets that are compatible with this version of the JVM specification.  Since the buildpack only ships a single version of each supported line, updates to the buildpack can change the exact version of the JDK or JRE.  In order to hold the JDK and JRE versions stable, the buildpack version itself must be stable.<p/>Buildpack releases (and the dependency versions for each release) can be found [here][bpv].  Few users will use this buildpack directly, instead consuming a language buildpack like `paketo-buildpacks/java` who's releases (and the individual buildpack versions and dependency versions for each release) can be found [here](https://github.com/paketo-buildpacks/java/releases).  Finally, some users will will consume builders like `paketobuildpacks/builder:base` who's releases can be found [here](https://hub.docker.com/r/paketobuildpacks/builder/tags?page=1&name=base).  To determine the individual buildpack versions and dependency versions for each builder release use the [`pack inspect-builder <image>`](https://buildpacks.io/docs/reference/pack/pack_inspect-builder/) functionality.
+| `$BP_JVM_TYPE`                | Configure the JVM type that is provided at runtime, i.e. a JDK or JRE - accepts values "JDK" or "JRE" (default). If a JRE type is requested but not available, a JDK will be provided.
 | `$BPL_JVM_HEAD_ROOM` | Configure the percentage of headroom the memory calculator will allocated.  Defaults to `0`.
 | `$BPL_JVM_LOADED_CLASS_COUNT` | Configure the number of classes that will be loaded at runtime.  Defaults to 35% of the number of classes.
 | `$BPL_JVM_THREAD_COUNT` | Configure the number of user threads at runtime.  Defaults to `250`.
+| `$BPL_HEAP_DUMP_PATH`         | Configure the location for writing heap dumps in the event of an OutOfMemoryError exception. Defaults to ``, which disables writing heap dumps. The path set must be writable by the JVM process.
+| `$BPL_JAVA_NMT_ENABLED`         | Configure whether Java Native Memory Tracking (NMT) is enabled. Defaults to `true`. Set this to `false` to disable NMT functionality.
+`$BPL_JAVA_NMT_LEVEL`         | Configure the level of detail for Java Native Memory Tracking (NMT) output. Defaults to `summary`. Set this to `detail` for detailed NMT output.
+| `$BPL_JMX_ENABLED`         | Configure whether Java Management Extensions (JMX) is enabled. Defaults to `false`. Set this to `true` to enable JMX functionality.
+| `$BPL_JMX_PORT`         | Configure the port number for JMX. Defaults to `5000`. When running the container, this value should match the port published locally, i.e. for Docker: --publish 5000:5000
+| `$BPL_DEBUG_ENABLED`         | Configure whether remote debugging features are enabled. Defaults to `false`. Set this to `true` to enable remote debugging.
+| `$BPL_DEBUG_PORT`         | Configure the port number for remote debugging. Defaults to `8000`.
+| `$BPL_DEBUG_SUSPEND`         | Configure whether to suspend execution until a debugger has attached. Defaults to `false`.
 | `$JAVA_TOOL_OPTIONS` | Configure the JVM launch flags
 
 [bpv]: https://github.com/paketo-buildpacks/oracle-jdk/releases

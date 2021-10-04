@@ -27,10 +27,13 @@ type = "Apache-2.0"
 uri  = "https://github.com/paketo-buildpacks/oracle-jdk/blob/main/LICENSE"
 
 [[stacks]]
+id = "io.paketo.stacks.tiny"
+
+[[stacks]]
 id = "io.buildpacks.stacks.bionic"
 
 [[stacks]]
-id = "org.cloudfoundry.stacks.cflinuxfs3"
+id = "*"
 
 [[metadata.configurations]]
 name        = "BPL_JVM_HEAD_ROOM"
@@ -51,9 +54,45 @@ default     = "250"
 launch      = true
 
 [[metadata.configurations]]
+name        = "BPL_HEAP_DUMP_PATH"
+description = "write heap dumps on error to this path"
+default     = ""
+launch      = true
+
+[[metadata.configurations]]
+name        = "BPL_JAVA_NMT_ENABLED"
+description = "enables Java Native Memory Tracking (NMT)"
+default     = "true"
+launch      = true
+
+[[metadata.configurations]]
+name        = "BPL_JAVA_NMT_LEVEL"
+description = "configure level of NMT, summary or detail"
+default     = "summary"
+launch      = true
+
+[[metadata.configurations]]
+name        = "BPL_JAVA_NMT_ENABLED"
+description = "enables Java Native Memory Tracking (NMT)"
+default     = "true"
+launch      = true
+
+[[metadata.configurations]]
+name        = "BPL_JAVA_NMT_LEVEL"
+description = "configure level of NMT, summary or detail"
+default     = "summary"
+launch      = true
+
+[[metadata.configurations]]
 name        = "BP_JVM_VERSION"
 description = "the Java version"
-default     = "11"
+default     = "17"
+build       = true
+
+[[metadata.configurations]]
+name        = "BP_JVM_TYPE"
+description = "the JVM type - JDK or JRE"
+default     = "JRE"
 build       = true
 
 [[metadata.configurations]]
@@ -67,11 +106,11 @@ name    = "oracle-jdk"
 version = "17.0.0"
 uri     = "https://download.oracle.com/java/17/archive/jdk-17_linux-x64_bin.tar.gz"
 sha256  = "106e3fc31b9fe4d0fd76c6c92b1931bdd1b0ac4d788747951de0f92cc73b1ffe"
-stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
+stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
 
   [[metadata.dependencies.licenses]]
-  type = "GPL-2.0 WITH Classpath-exception-2.0"
-  uri  = "https://aws.amazon.com/corretto/faqs/#Licensing_and_Open_Source"
+  type = "Oracle No-Fee Terms and Conditions License"
+  uri  = "https://www.oracle.com/downloads/licenses/no-fee-license.html"
 
 [metadata]
 pre-package   = "scripts/build.sh"
