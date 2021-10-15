@@ -15,112 +15,103 @@
 api = "0.6"
 
 [buildpack]
-id       = "paketo-buildpacks/oracle"
-name     = "Paketo Oracle Buildpack"
-version  = "{{.version}}"
-homepage = "https://github.com/paketo-buildpacks/oracle"
-description = "A Cloud Native Buildpack that provides the Oracle implementations of JREs and JDKs"
-keywords    = ["java", "jvm", "jre", "jdk"]
+  description = "A Cloud Native Buildpack that provides the Oracle implementations of JREs and JDKs"
+  homepage = "https://github.com/paketo-buildpacks/oracle"
+  id = "paketo-buildpacks/oracle"
+  keywords = ["java", "jvm", "jre", "jdk"]
+  name = "Paketo Oracle Buildpack"
+  version = "{{.version}}"
 
-[[buildpack.licenses]]
-type = "Apache-2.0"
-uri  = "https://github.com/paketo-buildpacks/oracle/blob/main/LICENSE"
-
-[[stacks]]
-id = "io.paketo.stacks.tiny"
-
-[[stacks]]
-id = "io.buildpacks.stacks.bionic"
-
-[[stacks]]
-id = "*"
-
-[[metadata.configurations]]
-name        = "BPL_JVM_HEAD_ROOM"
-description = "the headroom in memory calculation"
-default     = "0"
-launch      = true
-
-[[metadata.configurations]]
-name        = "BPL_JVM_LOADED_CLASS_COUNT"
-description = "the number of loaded classes in memory calculation"
-default     = "35% of classes"
-launch      = true
-
-[[metadata.configurations]]
-name        = "BPL_JVM_THREAD_COUNT"
-description = "the number of threads in memory calculation"
-default     = "250"
-launch      = true
-
-[[metadata.configurations]]
-name        = "BPL_HEAP_DUMP_PATH"
-description = "write heap dumps on error to this path"
-default     = ""
-launch      = true
-
-[[metadata.configurations]]
-name        = "BPL_JAVA_NMT_ENABLED"
-description = "enables Java Native Memory Tracking (NMT)"
-default     = "true"
-launch      = true
-
-[[metadata.configurations]]
-name        = "BPL_JAVA_NMT_LEVEL"
-description = "configure level of NMT, summary or detail"
-default     = "summary"
-launch      = true
-
-[[metadata.configurations]]
-name        = "BPL_JAVA_NMT_ENABLED"
-description = "enables Java Native Memory Tracking (NMT)"
-default     = "true"
-launch      = true
-
-[[metadata.configurations]]
-name        = "BPL_JAVA_NMT_LEVEL"
-description = "configure level of NMT, summary or detail"
-default     = "summary"
-launch      = true
-
-[[metadata.configurations]]
-name        = "BP_JVM_VERSION"
-description = "the Java version"
-default     = "17"
-build       = true
-
-[[metadata.configurations]]
-name        = "BP_JVM_TYPE"
-description = "the JVM type - JDK or JRE"
-default     = "JRE"
-build       = true
-
-[[metadata.configurations]]
-name        = "JAVA_TOOL_OPTIONS"
-description = "the JVM launch flags"
-launch      = true
-
-[[metadata.dependencies]]
-id      = "jdk"
-name    = "oracle-jdk"
-version = "17.0.0"
-uri     = "https://download.oracle.com/java/17/archive/jdk-17_linux-x64_bin.tar.gz"
-sha256  = "106e3fc31b9fe4d0fd76c6c92b1931bdd1b0ac4d788747951de0f92cc73b1ffe"
-stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
-
-  [[metadata.dependencies.licenses]]
-  type = "Oracle No-Fee Terms and Conditions License"
-  uri  = "https://www.oracle.com/downloads/licenses/no-fee-license.html"
+  [[buildpack.licenses]]
+    type = "Apache-2.0"
+    uri = "https://github.com/paketo-buildpacks/oracle/blob/main/LICENSE"
 
 [metadata]
-pre-package   = "scripts/build.sh"
-include-files = [
-  "LICENSE",
-  "NOTICE",
-  "README.md",
-  "bin/build",
-  "bin/detect",
-  "bin/helper",
-  "bin/main",
-  "buildpack.toml",
-]
+  include-files = ["LICENSE", "NOTICE", "README.md", "bin/build", "bin/detect", "bin/helper", "bin/main", "buildpack.toml"]
+  pre-package = "scripts/build.sh"
+
+  [[metadata.configurations]]
+    default = "0"
+    description = "the headroom in memory calculation"
+    launch = true
+    name = "BPL_JVM_HEAD_ROOM"
+
+  [[metadata.configurations]]
+    default = "35% of classes"
+    description = "the number of loaded classes in memory calculation"
+    launch = true
+    name = "BPL_JVM_LOADED_CLASS_COUNT"
+
+  [[metadata.configurations]]
+    default = "250"
+    description = "the number of threads in memory calculation"
+    launch = true
+    name = "BPL_JVM_THREAD_COUNT"
+
+  [[metadata.configurations]]
+    default = ""
+    description = "write heap dumps on error to this path"
+    launch = true
+    name = "BPL_HEAP_DUMP_PATH"
+
+  [[metadata.configurations]]
+    default = "true"
+    description = "enables Java Native Memory Tracking (NMT)"
+    launch = true
+    name = "BPL_JAVA_NMT_ENABLED"
+
+  [[metadata.configurations]]
+    default = "summary"
+    description = "configure level of NMT, summary or detail"
+    launch = true
+    name = "BPL_JAVA_NMT_LEVEL"
+
+  [[metadata.configurations]]
+    default = "true"
+    description = "enables Java Native Memory Tracking (NMT)"
+    launch = true
+    name = "BPL_JAVA_NMT_ENABLED"
+
+  [[metadata.configurations]]
+    default = "summary"
+    description = "configure level of NMT, summary or detail"
+    launch = true
+    name = "BPL_JAVA_NMT_LEVEL"
+
+  [[metadata.configurations]]
+    build = true
+    default = "17"
+    description = "the Java version"
+    name = "BP_JVM_VERSION"
+
+  [[metadata.configurations]]
+    build = true
+    default = "JRE"
+    description = "the JVM type - JDK or JRE"
+    name = "BP_JVM_TYPE"
+
+  [[metadata.configurations]]
+    description = "the JVM launch flags"
+    launch = true
+    name = "JAVA_TOOL_OPTIONS"
+
+  [[metadata.dependencies]]
+    id = "jdk"
+    name = "oracle-jdk"
+    sha256 = "106e3fc31b9fe4d0fd76c6c92b1931bdd1b0ac4d788747951de0f92cc73b1ffe"
+    stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
+    uri = "https://download.oracle.com/java/17/archive/jdk-17_linux-x64_bin.tar.gz"
+    version = "17.0.0"
+
+    [[metadata.dependencies.licenses]]
+      type = "Oracle No-Fee Terms and Conditions License"
+      uri = "https://www.oracle.com/downloads/licenses/no-fee-license.html"
+
+[[stacks]]
+  id = "io.paketo.stacks.tiny"
+
+[[stacks]]
+  id = "io.buildpacks.stacks.bionic"
+
+[[stacks]]
+  id = "*"
