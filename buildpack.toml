@@ -133,7 +133,7 @@ api = "0.7"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
     uri = "https://download.oracle.com/java/17/archive/jdk-17.0.1_linux-x64_bin.tar.gz"
     version = "17.0.1"
-    purl = "pkg:generic/bellsoft-jre@8.0.312?arch=amd64"
+    purl = "pkg:generic/bellsoft-jdk@8.0.312?arch=amd64"
     cpes = [
       "cpe:2.3:a:oracle:jdk:17.0.1:*:*:*:*:*:*:*"
     ]
