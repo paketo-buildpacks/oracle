@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-api = "0.6"
+api = "0.7"
 
 [buildpack]
   description = "A Cloud Native Buildpack that provides the Oracle implementations of JREs and JDKs"
@@ -21,6 +21,7 @@ api = "0.6"
   keywords = ["java", "jvm", "jre", "jdk"]
   name = "Paketo Oracle Buildpack"
   version = "{{.version}}"
+  sbom-formats = ["application/vnd.syft+json", "application/vnd.cyclonedx+json"]
 
   [[buildpack.licenses]]
     type = "Apache-2.0"
@@ -132,6 +133,10 @@ api = "0.6"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
     uri = "https://download.oracle.com/java/17/archive/jdk-17.0.1_linux-x64_bin.tar.gz"
     version = "17.0.1"
+    purl = "pkg:generic/bellsoft-jdk@8.0.312?arch=amd64"
+    cpes = [
+      "cpe:2.3:a:oracle:jdk:17.0.1:*:*:*:*:*:*:*"
+    ]
 
     [[metadata.dependencies.licenses]]
       type = "Oracle No-Fee Terms and Conditions License"
