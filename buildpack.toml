@@ -127,14 +127,14 @@ api = "0.7"
     name = "JAVA_TOOL_OPTIONS"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jdk:17.0.1:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:jdk:17.0.2:*:*:*:*:*:*:*"]
     id = "jdk"
     name = "oracle-jdk"
     purl = "pkg:generic/bellsoft-jdk@8.0.312?arch=amd64"
-    sha256 = "6f25bcb94d3e22fb52a4632c74e03b403834e81b68701ab7ecd900fb9cd89f43"
+    sha256 = "342e76bb9ded80aa1edd566efbae42f8f1c2366e19b9189e5941b45893b9861f"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://download.oracle.com/java/17/archive/jdk-17.0.1_linux-x64_bin.tar.gz"
-    version = "17.0.1"
+    uri = "https://download.oracle.com/java/17/archive/jdk-17.0.2_linux-x64_bin.tar.gz"
+    version = "17.0.2"
 
     [[metadata.dependencies.licenses]]
       type = "Oracle No-Fee Terms and Conditions License"
