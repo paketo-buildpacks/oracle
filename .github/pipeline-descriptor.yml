@@ -25,3 +25,11 @@ dependencies:
     distro: oracle
     type: jdk
     version: "17"
+- name:            JDK 18
+  id:              jdk
+  version_pattern: "18\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/foojay-dependency:main
+  with:
+    distro: oracle
+    type: jdk
+    version: "18"
