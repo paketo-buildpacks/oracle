@@ -19,7 +19,7 @@ api = "0.7"
   homepage = "https://github.com/paketo-buildpacks/oracle"
   id = "paketo-buildpacks/oracle"
   keywords = ["java", "jvm", "jre", "jdk"]
-  name = "Paketo Oracle Buildpack"
+  name = "Paketo Buildpack for Oracle"
   sbom-formats = ["application/vnd.syft+json", "application/vnd.cyclonedx+json"]
   version = "{{.version}}"
 
