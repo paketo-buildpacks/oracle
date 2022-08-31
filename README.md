@@ -1,6 +1,6 @@
 # `gcr.io/paketo-buildpacks/oracle`
 
-The Paketo Oracle Buildpack is a Cloud Native Buildpack that provides the Oracle implementations of JREs and JDKs.
+The Paketo Buildpack for Oracle is a Cloud Native Buildpack that provides the Oracle implementations of JREs and JDKs.
 
 This buildpack is designed to work in collaboration with other buildpacks which request contributions of JREs and JDKs.
 
