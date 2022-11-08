@@ -153,14 +153,14 @@ api = "0.7"
       uri = "https://www.oracle.com/downloads/licenses/no-fee-license.html"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jdk:18.0.2:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:jdk:19.0.1:*:*:*:*:*:*:*"]
     id = "jdk"
     name = "oracle-jdk"
-    purl = "pkg:generic/oracle-jdk@18.0.2?arch=amd64"
-    sha256 = "70ba0921ad5c3f716b29c9e6a7444abbfb8361aefa54c9852e9e4348ce4b61ba"
+    purl = "pkg:generic/oracle-jdk@19.0.1?arch=amd64"
+    sha256 = "a9f4886ff975616f82e1afaca5d9d85e79b6b9a698a2cb2ec824185e0dc4754f"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://download.oracle.com/java/18/archive/jdk-18.0.2_linux-x64_bin.tar.gz"
-    version = "18.0.2"
+    uri = "https://download.oracle.com/java/19/archive/jdk-19.0.1_linux-x64_bin.tar.gz"
+    version = "19.0.1"
 
     [[metadata.dependencies.licenses]]
       type = "Oracle No-Fee Terms and Conditions License"
