@@ -28,11 +28,11 @@ dependencies:
     distro: oracle
     type: jdk
     version: "17"
-- name:            JDK 19
+- name:            JDK 20
   id:              jdk
-  version_pattern: "19\\.[\\d]+\\.[\\d]+"
+  version_pattern: "20\\.[\\d]+\\.[\\d]+"
   uses:            docker://ghcr.io/paketo-buildpacks/actions/foojay-dependency:main
   with:
     distro: oracle
     type: jdk
-    version: "19"
+    version: "20"
