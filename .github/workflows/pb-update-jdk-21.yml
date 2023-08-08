@@ -42,9 +42,8 @@ jobs:
                 YJ_VERSION: 5.0.0
             - uses: actions/checkout@v3
             - id: dependency
-              uses: docker://ghcr.io/paketo-buildpacks/actions/foojay-dependency:main
+              uses: docker://ghcr.io/paketo-buildpacks/actions/oracle-dependency:main
               with:
-                distro: oracle
                 type: jdk
                 version: "21"
             - name: Update Buildpack Dependency
