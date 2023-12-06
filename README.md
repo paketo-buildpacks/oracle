@@ -21,7 +21,7 @@ The buildpack will do the following if a JDK is requested:
 The buildpack will do the following if `native-image-builder` is requested:
 
 * Contribute a JDK (see above)
-* Installs the Native Image Substrate VM into the JDK
+* Downloads [Oracle GraalVM](https://www.graalvm.org), which includes Native Image, instead of Oracle JDK
 * Prevents the JRE from being installed, even if requested
 
 The buildpack will do the following if a JRE is requested:
