@@ -1,8 +1,8 @@
 # `gcr.io/paketo-buildpacks/oracle`
 
-The Paketo Buildpack for Oracle is a Cloud Native Buildpack that provides the Oracle implementations of JREs and JDKs.
+The Paketo Buildpack for Oracle is a Cloud Native Buildpack that provides the Oracle implementations of JREs, JDKs, and Native Image.
 
-This buildpack is designed to work in collaboration with other buildpacks which request contributions of JREs and JDKs.
+This buildpack is designed to work in collaboration with other buildpacks which request contributions of JREs, JDKs, and Native Image.
 
 ## Behavior
 
@@ -10,12 +10,19 @@ This buildpack will participate if any of the following conditions are met
 
 * Another buildpack requires `jdk`
 * Another buildpack requires `jre`
+* Another buildpack requires `native-image-builder`
 
 The buildpack will do the following if a JDK is requested:
 
 * Contributes a JDK to a layer marked `build` and `cache` with all commands on `$PATH`
 * Contributes `$JAVA_HOME` configured to the build layer
 * Contributes `$JDK_HOME` configure to the build layer
+
+The buildpack will do the following if `native-image-builder` is requested:
+
+* Contribute a JDK (see above)
+* Installs the Native Image Substrate VM into the JDK
+* Prevents the JRE from being installed, even if requested
 
 The buildpack will do the following if a JRE is requested:
 
@@ -27,7 +34,7 @@ The buildpack will do the following if a JRE is requested:
 * If `BPL_JMX_ENABLED = true`
   * Contributes `-Djava.rmi.server.hostname=127.0.0.1`, `-Dcom.sun.management.jmxremote.authenticate=false`, `-Dcom.sun.management.jmxremote.ssl=false` & `-Dcom.sun.management.jmxremote.rmi.port=5000`
 * If `BPL_DEBUG_ENABLED = true`
-  * Contributes `-agentlib:jdwp=transport=dt_socket,server=y,address=*:8000,suspend=n`. If Java version is 8, address parameter is `address=:8000`
+  * Contributes `-agentlib:jdwp=transport=dt_socket,server=y,address=*:8000,suspend=n`.
 * If `BPL_JFR_ENABLED = true`
   * Contributes `-XX:StartFlightRecording=dumponexit=true,filename=/tmp/recording.jfr`
 * Contributes `$MALLOC_ARENA_MAX` to the layer
@@ -37,7 +44,7 @@ The buildpack will do the following if a JRE is requested:
 * If `metadata.launch = true`
   * Marks layer as `launch`
 * Contributes Memory Calculator to a layer marked `launch`
-* * Contributes Heap Dump helper to a layer marked `launch`
+* Contributes Heap Dump helper to a layer marked `launch`
 
 ## Configuration
 
@@ -78,5 +85,6 @@ The buildpack optionally accepts the following bindings:
 
 This buildpack is released under version 2.0 of the [Apache License][a].
 
-[a]: http://www.apache.org/licenses/LICENSE-2.0
+Oracle products are owned, distributed, and licensed by Oracle. This buildpack is only a tool to make it easier to install Oracle's Java-related products in your OCI image. The buildpack does not distribute or provide licenses for any Oracle software. As a user, it is your responsibility to ensure you have read, understand, and are complying with all licenses for the software you use whether installed through buildpacks or other means.
 
+[a]: http://www.apache.org/licenses/LICENSE-2.0

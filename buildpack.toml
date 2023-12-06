@@ -15,7 +15,7 @@
 api = "0.7"
 
 [buildpack]
-  description = "A Cloud Native Buildpack that provides the Oracle implementations of JREs and JDKs"
+  description = "A Cloud Native Buildpack that provides the Oracle implementations of JREs, JDKs, and Native Image"
   homepage = "https://github.com/paketo-buildpacks/oracle"
   id = "paketo-buildpacks/oracle"
   keywords = ["java", "jvm", "jre", "jdk", "native-image"]
