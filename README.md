@@ -85,6 +85,8 @@ The buildpack optionally accepts the following bindings:
 
 This buildpack is released under version 2.0 of the [Apache License][a].
 
-Oracle products are owned, distributed, and licensed by Oracle. This buildpack is only a tool to make it easier to install Oracle's Java-related products in your OCI image. The buildpack does not distribute or provide licenses for any Oracle software. As a user, it is your responsibility to ensure you have read, understand, and are complying with all licenses for the software you use whether installed through buildpacks or other means.
+Oracle products are owned, distributed, and licensed by Oracle. This buildpack is only a tool to make it easier to install Oracle's Java-related products in your OCI image. **The buildpack does not distribute or provide licenses for any Oracle software. As a user, it is your responsibility to ensure you have read, understand, and are complying with all licenses for the software you use whether installed through buildpacks or other means**.
+
+For your convenience, the [GraalVM Free Terms and Conditions (GFTC) including License for Early Adopter Versions License](https://www.oracle.com/downloads/licenses/graal-free-license.html) and [FAQ](https://www.oracle.com/java/technologies/javase/jdk-faqs.html). Please [report any broken links](https://github.com/paketo-buildpacks/oracle/issues).
 
 [a]: http://www.apache.org/licenses/LICENSE-2.0
