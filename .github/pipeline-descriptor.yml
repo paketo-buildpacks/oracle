@@ -34,6 +34,13 @@ dependencies:
   with:
     type: jdk
     version: "21"
+- name:            JDK 22
+  id:              jdk
+  version_pattern: "22\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/oracle-dependency:main
+  with:
+    type: jdk
+    version: "22"
 - name:            Native Image 17
   id:              native-image-svm
   version_pattern: "17\\.[\\d]+\\.[\\d]+"
@@ -48,3 +55,10 @@ dependencies:
   with:
     type: graalvm
     version: "21"
+- name:            Native Image 22
+  id:              native-image-svm
+  version_pattern: "22\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/oracle-dependency:main
+  with:
+    type: graalvm
+    version: "22"
