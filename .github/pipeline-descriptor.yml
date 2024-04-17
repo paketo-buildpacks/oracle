@@ -2,6 +2,9 @@ github:
   username: ${{ secrets.JAVA_GITHUB_USERNAME }}
   token:    ${{ secrets.PAKETO_BOT_GITHUB_TOKEN }}
 
+helpers:
+  "bin/helper": "github.com/paketo-buildpacks/libjvm/cmd/helper"
+
 codeowners:
 - path:  "*"
   owner: "@paketo-buildpacks/java-maintainers"
@@ -62,3 +65,52 @@ dependencies:
   with:
     type: graalvm
     version: "22"
+
+# ARM64
+- name:            JDK 17 ARM64
+  id:              jdk
+  version_pattern: "17\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/oracle-dependency:main
+  with:
+    type: jdk
+    version: "17"
+    arch: "arm64"
+- name:            JDK 21 ARM64
+  id:              jdk
+  version_pattern: "21\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/oracle-dependency:main
+  with:
+    type: jdk
+    version: "21"
+    arch: "arm64"
+- name:            JDK 22 ARM64
+  id:              jdk
+  version_pattern: "22\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/oracle-dependency:main
+  with:
+    type: jdk
+    version: "22"
+    arch: "arm64"
+- name:            Native Image 17 ARM64
+  id:              native-image-svm
+  version_pattern: "17\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/oracle-dependency:main
+  with:
+    type: graalvm
+    version: "17"
+- name:            Native Image 21 ARM64
+  id:              native-image-svm
+  version_pattern: "21\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/oracle-dependency:main
+  with:
+    type: graalvm
+    version: "21"
+    arch: "arm64"
+- name:            Native Image 22 ARM64
+  id:              native-image-svm
+  version_pattern: "22\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/oracle-dependency:main
+  with:
+    type: graalvm
+    version: "22"
+    arch: "arm64"
