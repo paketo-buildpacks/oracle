@@ -283,7 +283,7 @@ api = "0.7"
     id = "native-image-svm"
     name = "Oracle GraalVM"
     purl = "pkg:generic/graalvm-jdk@21.0.3?arch=arm64"
-    sha256 = "blank"
+    sha256 = "1ced168c9e95e4e33b62073934c7899f06ad6a1771554227d8b4f168e2e963c0"
     stacks = ["*"]
     uri = "https://download.oracle.com/graalvm/21/archive/graalvm-jdk-21.0.3_linux-aarch64_bin.tar.gz"
     version = "21.0.3"
