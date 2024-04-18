@@ -27,14 +27,6 @@ api = "0.7"
     type = "Apache-2.0"
     uri = "https://github.com/paketo-buildpacks/oracle/blob/main/LICENSE"
 
-[[targets]]
-os = "linux"
-arch = "amd64"
-
-[[targets]]
-os = "linux"
-arch = "arm64"
-
 [metadata]
   include-files = ["LICENSE", "NOTICE", "README.md", "linux/amd64/bin/build", "linux/amd64/bin/detect", "linux/amd64/bin/main", "linux/amd64/bin/helper", "linux/arm64/bin/build", "linux/arm64/bin/detect", "linux/arm64/bin/main", "linux/arm64/bin/helper", "buildpack.toml"]
   pre-package = "scripts/build.sh"
@@ -235,7 +227,7 @@ arch = "arm64"
     id = "jdk"
     name = "Oracle JDK"
     purl = "pkg:generic/oracle-jdk@17.0.11?arch=arm64"
-    sha256 = "blank"
+    sha256 = "7f1e921f932bd7e372cbbd277807bbba774022558f2aa979fafcdced5d24619f"
     stacks = ["*"]
     uri = "https://download.oracle.com/java/17/archive/jdk-17.0.11_linux-aarch64_bin.tar.gz"
     version = "17.0.11"
@@ -316,3 +308,11 @@ arch = "arm64"
 
 [[stacks]]
   id = "*"
+
+[[targets]]
+  arch = "amd64"
+  os = "linux"
+
+[[targets]]
+  arch = "arm64"
+  os = "linux"
