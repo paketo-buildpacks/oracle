@@ -255,7 +255,7 @@ api = "0.7"
     id = "jdk"
     name = "Oracle JDK"
     purl = "pkg:generic/oracle-jdk@22.0.1?arch=arm64"
-    sha256 = "blank"
+    sha256 = "cdd48b5b974287fe6ec8f58591a8de1a19323763d88ccfaa950e3a39c3fec044"
     stacks = ["*"]
     uri = "https://download.oracle.com/java/22/archive/jdk-22.0.1_linux-aarch64_bin.tar.gz"
     version = "22.0.1"
