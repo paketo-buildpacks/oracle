@@ -98,6 +98,7 @@ dependencies:
   with:
     type: graalvm
     version: "17"
+    arch: "arm64"
 - name:            Native Image 21 ARM64
   id:              native-image-svm
   version_pattern: "21\\.[\\d]+\\.[\\d]+"
