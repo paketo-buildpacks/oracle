@@ -27,14 +27,6 @@ api = "0.7"
     type = "Apache-2.0"
     uri = "https://github.com/paketo-buildpacks/oracle/blob/main/LICENSE"
 
-[[targets]]
-os = "linux"
-arch = "amd64"
-
-[[targets]]
-os = "linux"
-arch = "arm64"
-
 [metadata]
   include-files = ["LICENSE", "NOTICE", "README.md", "linux/amd64/bin/build", "linux/amd64/bin/detect", "linux/amd64/bin/main", "linux/amd64/bin/helper", "linux/arm64/bin/build", "linux/arm64/bin/detect", "linux/arm64/bin/main", "linux/arm64/bin/helper", "buildpack.toml"]
   pre-package = "scripts/build.sh"
@@ -291,7 +283,7 @@ arch = "arm64"
     id = "native-image-svm"
     name = "Oracle GraalVM"
     purl = "pkg:generic/graalvm-jdk@21.0.3?arch=arm64"
-    sha256 = "blank"
+    sha256 = "1ced168c9e95e4e33b62073934c7899f06ad6a1771554227d8b4f168e2e963c0"
     stacks = ["*"]
     uri = "https://download.oracle.com/graalvm/21/archive/graalvm-jdk-21.0.3_linux-aarch64_bin.tar.gz"
     version = "21.0.3"
@@ -316,3 +308,11 @@ arch = "arm64"
 
 [[stacks]]
   id = "*"
+
+[[targets]]
+  arch = "amd64"
+  os = "linux"
+
+[[targets]]
+  arch = "arm64"
+  os = "linux"
