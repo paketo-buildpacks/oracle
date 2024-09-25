@@ -28,8 +28,8 @@ jobs:
               uses: docker://ghcr.io/paketo-buildpacks/actions/foojay-dependency:main
               with:
                 arch: arm64
-                distro: oracle
-                type: graalvm
+                distro: graalvm
+                type: jdk
                 version: "17"
             - name: Update Buildpack Dependency
               id: buildpack
