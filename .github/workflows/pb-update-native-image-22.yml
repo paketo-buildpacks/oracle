@@ -27,8 +27,8 @@ jobs:
             - id: dependency
               uses: docker://ghcr.io/paketo-buildpacks/actions/foojay-dependency:main
               with:
-                distro: oracle
-                type: graalvm
+                distro: graalvm
+                type: jdk
                 version: "22"
             - name: Update Buildpack Dependency
               id: buildpack
