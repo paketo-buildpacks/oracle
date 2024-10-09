@@ -40,13 +40,13 @@ dependencies:
       type: jdk
       version: "21"
       distro: oracle
-  - name: JDK 22
+  - name: JDK 23
     id: jdk
-    version_pattern: "22\\.[\\d]+\\.[\\d]+"
+    version_pattern: "23\\.[\\d]+\\.[\\d]+"
     uses: docker://ghcr.io/paketo-buildpacks/actions/foojay-dependency:main
     with:
       type: jdk
-      version: "22"
+      version: "23"
       distro: oracle
   - name: Native Image 17
     id: native-image-svm
@@ -64,13 +64,13 @@ dependencies:
       type: jdk
       version: "21"
       distro: graalvm
-  - name: Native Image 22
+  - name: Native Image 23
     id: native-image-svm
-    version_pattern: "22\\.[\\d]+\\.[\\d]+"
+    version_pattern: "23\\.[\\d]+\\.[\\d]+"
     uses: docker://ghcr.io/paketo-buildpacks/actions/foojay-dependency:main
     with:
       type: jdk
-      version: "22"
+      version: "23"
       distro: graalvm
 
   # ARM64
@@ -92,13 +92,13 @@ dependencies:
       version: "21"
       distro: oracle
       arch: "arm64"
-  - name: JDK 22 ARM64
+  - name: JDK 23 ARM64
     id: jdk
-    version_pattern: "22\\.[\\d]+\\.[\\d]+"
+    version_pattern: "23\\.[\\d]+\\.[\\d]+"
     uses: docker://ghcr.io/paketo-buildpacks/actions/foojay-dependency:main
     with:
       type: jdk
-      version: "22"
+      version: "23"
       distro: oracle
       arch: "arm64"
   - name: Native Image 17 ARM64
@@ -119,12 +119,12 @@ dependencies:
       version: "21"
       distro: graalvm
       arch: "arm64"
-  - name: Native Image 22 ARM64
+  - name: Native Image 23 ARM64
     id: native-image-svm
-    version_pattern: "22\\.[\\d]+\\.[\\d]+"
+    version_pattern: "23\\.[\\d]+\\.[\\d]+"
     uses: docker://ghcr.io/paketo-buildpacks/actions/foojay-dependency:main
     with:
       type: jdk
-      version: "22"
+      version: "23"
       distro: graalvm
       arch: "arm64"
