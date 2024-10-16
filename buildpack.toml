@@ -123,7 +123,7 @@ api = "0.7"
 
   [[metadata.configurations]]
     build = true
-    default = "17"
+    default = "21"
     description = "the Java version"
     name = "BP_JVM_VERSION"
 
@@ -139,21 +139,7 @@ api = "0.7"
     name = "JAVA_TOOL_OPTIONS"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jdk:17.0.12:*:*:*:*:*:*:*"]
-    id = "jdk"
-    name = "Oracle JDK"
-    purl = "pkg:generic/oracle-jdk@17.0.12?arch=amd64"
-    sha256 = "311f1448312ecab391fe2a1b2ac140d6e1c7aea6fbf08416b466a58874f2b40f"
-    stacks = ["*"]
-    uri = "https://download.oracle.com/java/17/archive/jdk-17.0.12_linux-x64_bin.tar.gz"
-    version = "17.0.12"
-
-    [[metadata.dependencies.licenses]]
-      type = "Oracle No-Fee Terms and Conditions License"
-      uri = "https://www.oracle.com/downloads/licenses/no-fee-license.html"
-
-  [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jdk:21.0.5:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:jdk:21.0.4:*:*:*:*:*:*:*"]
     id = "jdk"
     name = "Oracle JDK"
     purl = "pkg:generic/oracle-jdk@21.0.5?arch=amd64"
@@ -179,20 +165,6 @@ api = "0.7"
     [[metadata.dependencies.licenses]]
       type = "Oracle No-Fee Terms and Conditions License"
       uri = "https://www.oracle.com/downloads/licenses/no-fee-license.html"
-
-  [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jdk:17.0.12:*:*:*:*:*:*:*:*"]
-    id = "native-image-svm"
-    name = "Oracle GraalVM"
-    purl = "pkg:generic/graalvm-jdk@17.0.12?arch=amd64"
-    sha256 = "b6f3dace24cf1960ec790216f4c86f00d4f43df64e4e8b548f6382f04894713f"
-    stacks = ["*"]
-    uri = "https://download.oracle.com/graalvm/17/archive/graalvm-jdk-17.0.12_linux-x64_bin.tar.gz"
-    version = "17.0.12"
-
-    [[metadata.dependencies.licenses]]
-      type = "GraalVM Free Terms and Conditions License"
-      uri = "https://www.oracle.com/downloads/licenses/graal-free-license.html"
 
   [[metadata.dependencies]]
     cpes = ["cpe:2.3:a:oracle:jdk:21.0.4:*:*:*:*:*:*:*:*"]
@@ -223,20 +195,6 @@ api = "0.7"
       uri = "https://www.oracle.com/downloads/licenses/graal-free-license.html"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jdk:17.0.12:*:*:*:*:*:*:*"]
-    id = "jdk"
-    name = "Oracle JDK"
-    purl = "pkg:generic/oracle-jdk@17.0.12?arch=arm64"
-    sha256 = "31c2fa06f3f98d92984a86269c71e6b9e956272084f3a1d2db6d07e6164b2f4f"
-    stacks = ["*"]
-    uri = "https://download.oracle.com/java/17/archive/jdk-17.0.12_linux-aarch64_bin.tar.gz"
-    version = "17.0.12"
-
-    [[metadata.dependencies.licenses]]
-      type = "Oracle No-Fee Terms and Conditions License"
-      uri = "https://www.oracle.com/downloads/licenses/no-fee-license.html"
-
-  [[metadata.dependencies]]
     cpes = ["cpe:2.3:a:oracle:jdk:21.0.5:*:*:*:*:*:*:*"]
     id = "jdk"
     name = "Oracle JDK"
@@ -263,20 +221,6 @@ api = "0.7"
     [[metadata.dependencies.licenses]]
       type = "Oracle No-Fee Terms and Conditions License"
       uri = "https://www.oracle.com/downloads/licenses/no-fee-license.html"
-
-  [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jdk:17.0.12:*:*:*:*:*:*:*:*"]
-    id = "native-image-svm"
-    name = "Oracle GraalVM"
-    purl = "pkg:generic/graalvm-jdk@17.0.12?arch=arm64"
-    sha256 = "bd991d486b92deb74337b881e0f13a764c9c1e90fc358819080f7321fa5175e8"
-    stacks = ["*"]
-    uri = "https://download.oracle.com/graalvm/17/archive/graalvm-jdk-17.0.12_linux-aarch64_bin.tar.gz"
-    version = "17.0.12"
-
-    [[metadata.dependencies.licenses]]
-      type = "GraalVM Free Terms and Conditions License"
-      uri = "https://www.oracle.com/downloads/licenses/graal-free-license.html"
 
   [[metadata.dependencies]]
     cpes = ["cpe:2.3:a:oracle:jdk:21.0.4:*:*:*:*:*:*:*:*"]
