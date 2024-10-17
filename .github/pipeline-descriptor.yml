@@ -24,14 +24,6 @@ docker_credentials:
     password: ${{ secrets.PAKETO_BUILDPACKS_DOCKERHUB_PASSWORD }}
 
 dependencies:
-  - name: JDK 17
-    id: jdk
-    version_pattern: "17\\.[\\d]+\\.[\\d]+"
-    uses: docker://ghcr.io/paketo-buildpacks/actions/foojay-dependency:main
-    with:
-      type: jdk
-      version: "17"
-      distro: oracle
   - name: JDK 21
     id: jdk
     version_pattern: "21\\.[\\d]+\\.[\\d]+"
@@ -48,14 +40,6 @@ dependencies:
       type: jdk
       version: "23"
       distro: oracle
-  - name: Native Image 17
-    id: native-image-svm
-    version_pattern: "17\\.[\\d]+\\.[\\d]+"
-    uses: docker://ghcr.io/paketo-buildpacks/actions/foojay-dependency:main
-    with:
-      type: jdk
-      version: "17"
-      distro: graalvm
   - name: Native Image 21
     id: native-image-svm
     version_pattern: "21\\.[\\d]+\\.[\\d]+"
@@ -74,15 +58,6 @@ dependencies:
       distro: graalvm
 
   # ARM64
-  - name: JDK 17 ARM64
-    id: jdk
-    version_pattern: "17\\.[\\d]+\\.[\\d]+"
-    uses: docker://ghcr.io/paketo-buildpacks/actions/foojay-dependency:main
-    with:
-      type: jdk
-      version: "17"
-      distro: oracle
-      arch: "arm64"
   - name: JDK 21 ARM64
     id: jdk
     version_pattern: "21\\.[\\d]+\\.[\\d]+"
@@ -100,15 +75,6 @@ dependencies:
       type: jdk
       version: "23"
       distro: oracle
-      arch: "arm64"
-  - name: Native Image 17 ARM64
-    id: native-image-svm
-    version_pattern: "17\\.[\\d]+\\.[\\d]+"
-    uses: docker://ghcr.io/paketo-buildpacks/actions/foojay-dependency:main
-    with:
-      type: jdk
-      version: "17"
-      distro: graalvm
       arch: "arm64"
   - name: Native Image 21 ARM64
     id: native-image-svm
