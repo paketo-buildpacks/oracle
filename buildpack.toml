@@ -153,14 +153,14 @@ api = "0.7"
       uri = "https://www.oracle.com/downloads/licenses/no-fee-license.html"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jdk:23.0.2:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:jdk:24.0.0:*:*:*:*:*:*:*"]
     id = "jdk"
     name = "Oracle JDK"
-    purl = "pkg:generic/oracle-jdk@23.0.2?arch=amd64"
-    sha256 = "12d7553d06b5cacf88b26cad4a8ba83cabe79646f1defb1b7fd029f3356d0922"
+    purl = "pkg:generic/oracle-jdk@24.0.0?arch=amd64"
+    sha256 = "f04a4421519b9719ac96078e16af1ff0bbbfdbda7481b8ad573d75b5b6cd50b1"
     stacks = ["*"]
-    uri = "https://download.oracle.com/java/23/archive/jdk-23.0.2_linux-x64_bin.tar.gz"
-    version = "23.0.2"
+    uri = "https://download.oracle.com/java/24/archive/jdk-24_linux-x64_bin.tar.gz"
+    version = "24.0.0"
 
     [[metadata.dependencies.licenses]]
       type = "Oracle No-Fee Terms and Conditions License"
@@ -181,14 +181,14 @@ api = "0.7"
       uri = "https://www.oracle.com/downloads/licenses/graal-free-license.html"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jdk:23.0.2:*:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:jdk:24.0.0:*:*:*:*:*:*:*:*"]
     id = "native-image-svm"
     name = "Oracle GraalVM"
-    purl = "pkg:generic/graalvm-jdk@23.0.2?arch=amd64"
-    sha256 = "db09b1fe18b83f338af9b3291443774b3170d9eba17538ce2ee39c5e6d601dfc"
+    purl = "pkg:generic/graalvm-jdk@24.0.0?arch=amd64"
+    sha256 = "ae5771a7b4ef84041e0d9008f754849fab14aa574681e0130eb27606f3dfb012"
     stacks = ["*"]
-    uri = "https://download.oracle.com/graalvm/23/archive/graalvm-jdk-23.0.2_linux-x64_bin.tar.gz"
-    version = "23.0.2"
+    uri = "https://download.oracle.com/graalvm/24/archive/graalvm-jdk-24_linux-x64_bin.tar.gz"
+    version = "24.0.0"
 
     [[metadata.dependencies.licenses]]
       type = "GraalVM Free Terms and Conditions License"
@@ -209,14 +209,14 @@ api = "0.7"
       uri = "https://www.oracle.com/downloads/licenses/no-fee-license.html"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jdk:23.0.2:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:jdk:24.0.0:*:*:*:*:*:*:*"]
     id = "jdk"
     name = "Oracle JDK"
-    purl = "pkg:generic/oracle-jdk@23.0.2?arch=arm64"
-    sha256 = "3f8423bbd538e7cb20a26f944429170b47413af00ccc0e01ce5255f3f9a8d69b"
+    purl = "pkg:generic/oracle-jdk@24.0.0?arch=arm64"
+    sha256 = "428a08439fea7c73cdc55d986faff1660afd1e40d8d275a3094cbabcda63c0ab"
     stacks = ["*"]
-    uri = "https://download.oracle.com/java/23/archive/jdk-23.0.2_linux-aarch64_bin.tar.gz"
-    version = "23.0.2"
+    uri = "https://download.oracle.com/java/24/archive/jdk-24_linux-aarch64_bin.tar.gz"
+    version = "24.0.0"
 
     [[metadata.dependencies.licenses]]
       type = "Oracle No-Fee Terms and Conditions License"
@@ -237,14 +237,14 @@ api = "0.7"
       uri = "https://www.oracle.com/downloads/licenses/graal-free-license.html"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jdk:23.0.2:*:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:jdk:24.0.0:*:*:*:*:*:*:*:*"]
     id = "native-image-svm"
     name = "Oracle GraalVM"
-    purl = "pkg:generic/graalvm-jdk@23.0.2?arch=arm64"
-    sha256 = "56507aeb8fe5ecd58542b3c4def109bc25e4133284274724fc7354e691864f05"
+    purl = "pkg:generic/graalvm-jdk@24.0.0?arch=arm64"
+    sha256 = "615df3ad9380ee1cc58886fbcbe89f0daaf4a193382567ae60a6c3a028dc834a"
     stacks = ["*"]
-    uri = "https://download.oracle.com/graalvm/23/archive/graalvm-jdk-23.0.2_linux-aarch64_bin.tar.gz"
-    version = "23.0.2"
+    uri = "https://download.oracle.com/graalvm/24/archive/graalvm-jdk-24_linux-aarch64_bin.tar.gz"
+    version = "24.0.0"
 
     [[metadata.dependencies.licenses]]
       type = "GraalVM Free Terms and Conditions License"
