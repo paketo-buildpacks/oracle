@@ -1,4 +1,7 @@
-# `gcr.io/paketo-buildpacks/oracle`
+# Paketo Buildpack for Oracle
+
+## Buildpack ID: `paketo-buildpacks/oracle`
+## Registry URLs: `docker.io/paketobuildpacks/oracle`
 
 The Paketo Buildpack for Oracle is a Cloud Native Buildpack that provides the Oracle implementations of JREs, JDKs, and Native Image.
 
