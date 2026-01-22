@@ -195,14 +195,14 @@ api = "0.7"
       uri = "https://www.oracle.com/downloads/licenses/graal-free-license.html"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jdk:21.0.9:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:jdk:21.0.10:*:*:*:*:*:*:*"]
     id = "jdk"
     name = "Oracle JDK"
-    purl = "pkg:generic/oracle-jdk@21.0.9?arch=arm64"
-    sha256 = "6e0eef0f229e121dd432358b60e2755bc0916b207bcef014839c78cf9e4367ac"
+    purl = "pkg:generic/oracle-jdk@21.0.10?arch=arm64"
+    sha256 = "edaf800c6deb1e7daeb448ef9c6a047551fd681942cb9e37e2729ae1a3918d1d"
     stacks = ["*"]
-    uri = "https://download.oracle.com/java/21/archive/jdk-21.0.9_linux-aarch64_bin.tar.gz"
-    version = "21.0.9"
+    uri = "https://download.oracle.com/java/21/archive/jdk-21.0.10_linux-aarch64_bin.tar.gz"
+    version = "21.0.10"
 
     [[metadata.dependencies.licenses]]
       type = "Oracle No-Fee Terms and Conditions License"
