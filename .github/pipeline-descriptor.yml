@@ -36,6 +36,14 @@ dependencies:
       type: jdk
       version: "25"
       distro: oracle
+  - name: JDK 26
+    id: jdk
+    version_pattern: "26\\.[\\d]+\\.[\\d]+"
+    uses: docker://ghcr.io/paketo-buildpacks/actions/foojay-dependency:main
+    with:
+      type: jdk
+      version: "26"
+      distro: oracle
   - name: Native Image 21
     id: native-image-svm
     version_pattern: "21\\.[\\d]+\\.[\\d]+"
@@ -70,6 +78,15 @@ dependencies:
     with:
       type: jdk
       version: "25"
+      distro: oracle
+      arch: "arm64"
+  - name: JDK 26 ARM64
+    id: jdk
+    version_pattern: "26\\.[\\d]+\\.[\\d]+"
+    uses: docker://ghcr.io/paketo-buildpacks/actions/foojay-dependency:main
+    with:
+      type: jdk
+      version: "26"
       distro: oracle
       arch: "arm64"
   - name: Native Image 21 ARM64
