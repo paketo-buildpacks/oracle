@@ -235,20 +235,20 @@ api = "0.7"
     [[metadata.dependencies.licenses]]
       type = "Oracle No-Fee Terms and Conditions License"
       uri = "https://www.oracle.com/downloads/licenses/no-fee-license.html"
-    
-    [[metadata.dependencies]]
-      cpes = ["cpe:2.3:a:oracle:jdk:26.0.0:*:*:*:*:*:*:*"]
-      id = "jdk"
-      name = "Oracle JDK"
-      purl = "pkg:generic/oracle-jdk@26.0.0?arch=arm64"
-      sha256 = "e3b342ea6eccdef7b3c84915d473fbba1e6c7496f9834120c4205020fbce5ab4"
-      stacks = ["*"]
-      uri = "https://download.oracle.com/java/26/archive/jdk-26_linux-aarch64_bin.tar.gz"
-      version = "26.0.0"
-      
-      [[metadata.dependencies.licenses]]
-        type = "Oracle No-Fee Terms and Conditions License"
-        uri = "https://www.oracle.com/downloads/licenses/no-fee-license.html"
+
+  [[metadata.dependencies]]
+    cpes = ["cpe:2.3:a:oracle:jdk:26.0.0:*:*:*:*:*:*:*"]
+    id = "jdk"
+    name = "Oracle JDK"
+    purl = "pkg:generic/oracle-jdk@26.0.0?arch=arm64"
+    sha256 = "e3b342ea6eccdef7b3c84915d473fbba1e6c7496f9834120c4205020fbce5ab4"
+    stacks = ["*"]
+    uri = "https://download.oracle.com/java/26/archive/jdk-26_linux-aarch64_bin.tar.gz"
+    version = "26.0.0"
+
+    [[metadata.dependencies.licenses]]
+      type = "Oracle No-Fee Terms and Conditions License"
+      uri = "https://www.oracle.com/downloads/licenses/no-fee-license.html"
 
   [[metadata.dependencies]]
     cpes = ["cpe:2.3:a:oracle:jdk:21.0.10:*:*:*:*:*:*:*:*"]
