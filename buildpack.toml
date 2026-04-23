@@ -139,14 +139,14 @@ api = "0.7"
     name = "JAVA_TOOL_OPTIONS"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jdk:21.0.10:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:jdk:21.0.11:*:*:*:*:*:*:*"]
     id = "jdk"
     name = "Oracle JDK"
-    purl = "pkg:generic/oracle-jdk@21.0.10?arch=amd64"
-    sha256 = "773eff7191d996d3b6ce3a99c21ce69cf2d836fd07277106313732a098d4309a"
+    purl = "pkg:generic/oracle-jdk@21.0.11?arch=amd64"
+    sha256 = "e1c25a83f9e2e374c93e0c29cc3d98a947621ae0fefa4a8d932951eb160c47c3"
     stacks = ["*"]
-    uri = "https://download.oracle.com/java/21/archive/jdk-21.0.10_linux-x64_bin.tar.gz"
-    version = "21.0.10"
+    uri = "https://download.oracle.com/java/21/archive/jdk-21.0.11_linux-x64_bin.tar.gz"
+    version = "21.0.11"
 
     [[metadata.dependencies.licenses]]
       type = "Oracle No-Fee Terms and Conditions License"
