@@ -143,9 +143,9 @@ api = "0.7"
     id = "jdk"
     name = "Oracle JDK"
     purl = "pkg:generic/oracle-jdk@21.0.12?arch=amd64"
-    sha256 = "33cc8a4ba4163b003bbf3516824861ee49e7295e6a2879ec91316c2aead78b80"
+    sha256 = "12f870b21301b42292558a3f872ce543affa2b86cb6458591c78388c41ddb111"
     stacks = ["*"]
-    uri = "https://download.oracle.com/java/21/archive/jdk-21.0.12_linux-x64_bin.tar.gz"
+    uri = "https://download.oracle.com/java/21/archive/jdk-21.0.12.1_linux-x64_bin.tar.gz"
     version = "21.0.12"
 
     [[metadata.dependencies.licenses]]
