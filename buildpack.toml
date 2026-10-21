@@ -157,9 +157,9 @@ api = "0.7"
     id = "jdk"
     name = "Oracle JDK"
     purl = "pkg:generic/oracle-jdk@25.0.4?arch=amd64"
-    sha256 = "0d3e87de2516557a170e2df4f6a4872b1749ea3174dd7c9e555cb5170e618301"
+    sha256 = "dd7e7f51d23bcffe85f1a439577ce1c0190a33417b34afdb338f9b3897bdeaec"
     stacks = ["*"]
-    uri = "https://download.oracle.com/java/25/archive/jdk-25.0.4_linux-x64_bin.tar.gz"
+    uri = "https://download.oracle.com/java/25/archive/jdk-25.0.4.1_linux-x64_bin.tar.gz"
     version = "25.0.4"
 
     [[metadata.dependencies.licenses]]
