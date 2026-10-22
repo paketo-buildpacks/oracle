@@ -265,14 +265,14 @@ api = "0.7"
       uri = "https://www.oracle.com/downloads/licenses/graal-free-license.html"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jdk:25.3.4:*:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:jdk:25.0.5:*:*:*:*:*:*:*:*"]
     id = "native-image-svm"
     name = "Oracle GraalVM"
-    purl = "pkg:generic/graalvm-jdk@25.3.4?arch=arm64"
-    sha256 = "aa80a8aa63b0e2ca50946c7fddb77a7d1bf8488a8a3f0175275a3c0e8face20b"
+    purl = "pkg:generic/graalvm-jdk@25.0.5?arch=arm64"
+    sha256 = "53975795fb5d669e7cbbf89620e38c7430e69e2be199c2c8ea4e5b371a927674"
     stacks = ["*"]
-    uri = "https://gds.oracle.com/api/20220101/artifacts/2A940281172D4B6A8498B5D9FD79DAA3/content"
-    version = "25.3.4"
+    uri = "https://gds.oracle.com/api/20220101/artifacts/4DB0CA485E7446158E25AC33EFBD281B/content"
+    version = "25.0.5"
 
     [[metadata.dependencies.licenses]]
       type = "GraalVM Free Terms and Conditions License"
