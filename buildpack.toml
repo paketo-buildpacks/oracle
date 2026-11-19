@@ -199,9 +199,9 @@ api = "0.7"
     id = "native-image-svm"
     name = "Oracle GraalVM"
     purl = "pkg:generic/graalvm-jdk@25.0.5?arch=amd64"
-    sha256 = "b907d3bdf1eabff6d2b3fcb93ccd44004a0eee66730a28ace0a5b5f5cb2ac46a"
+    sha256 = "90582f405cb89a825a43297cdacc7f427ce04039a249f5f0fc75c95b50600b08"
     stacks = ["*"]
-    uri = "https://gds.oracle.com/api/20220101/artifacts/D31F8D13975942E3993AA792B3944F9F/content"
+    uri = "https://gds.oracle.com/api/20220101/artifacts/D95C37081B8A44CDADD213FEB1F8FB00/content"
     version = "25.0.5"
 
     [[metadata.dependencies.licenses]]
